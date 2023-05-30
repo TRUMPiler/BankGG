@@ -31,9 +31,6 @@ namespace BankGG
             {
                 Form2 f = new Form2();
                 f.Show();
-                this.Hide();
-               
-
             }
             catch(Exception eg)
             {

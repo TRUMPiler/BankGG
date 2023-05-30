@@ -38,14 +38,16 @@ namespace BankGG
                 Amount = maskedTextBox1.Text,
                 BirthDate = date
             };
-            SetResponse resp = await customer.SetTaskAsync("Bankdetails",datalayer);
+            SetResponse resp = await customer.SetTaskAsync("Bankdetails/"+FirstNtext.Text,datalayer);
             GGdata result = resp.ResultAs<GGdata>();
-            MessageBox.Show("data inserted of "+result.Name);
+            MessageBox.Show("Bank Account of "+result.Name+" created succesfully");
+            this.Close();
         }
 
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
+            MessageBox.Show("GG\n op");
             f.Show();
             this.Close();
         }
@@ -61,8 +63,10 @@ namespace BankGG
                 else
                 {
                     status = "Not connected";
-                }
-            MessageBox.Show(status);
+                MessageBox.Show(status+"\n form cannot opened");
+                this.Close();
+            }
+           
         }
     }
 }

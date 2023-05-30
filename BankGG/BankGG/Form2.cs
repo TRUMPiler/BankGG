@@ -47,7 +47,7 @@ namespace BankGG
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
-            MessageBox.Show("GG\n op");
+         
             f.Show();
             this.Close();
         }

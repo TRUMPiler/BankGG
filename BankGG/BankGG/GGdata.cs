@@ -2,6 +2,7 @@
 {
     internal class GGdata
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string address { get; set; }

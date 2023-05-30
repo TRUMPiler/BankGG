@@ -82,6 +82,7 @@ namespace BankGG
             this.fetchdetailsbtn.TabIndex = 3;
             this.fetchdetailsbtn.Text = "See your bank details";
             this.fetchdetailsbtn.UseVisualStyleBackColor = true;
+            this.fetchdetailsbtn.Click += new System.EventHandler(this.fetchdetailsbtn_Click);
             // 
             // withbtn
             // 

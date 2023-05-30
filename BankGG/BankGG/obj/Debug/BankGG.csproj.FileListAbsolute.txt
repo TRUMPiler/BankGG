@@ -16,3 +16,4 @@ C:\Users\cjesu\source\repos\BankGG\BankGG\obj\Debug\BankGG.csproj.CopyComplete
 C:\Users\cjesu\source\repos\BankGG\BankGG\obj\Debug\BankGG.exe
 C:\Users\cjesu\source\repos\BankGG\BankGG\obj\Debug\BankGG.pdb
 C:\Users\cjesu\source\repos\BankGG\BankGG\obj\Debug\BankGG.Form2.resources
+C:\Users\cjesu\source\repos\BankGG\BankGG\obj\Debug\BankGG.Form3.resources

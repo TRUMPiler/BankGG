@@ -1,7 +1,8 @@
-﻿namespace BankGG
+﻿using System.Collections.Generic;
+namespace BankGG
 {
     internal class Data
     {
-        public string Name { get; set; }
+        public int LastAccountnoadded { get; set; }
     }
 }

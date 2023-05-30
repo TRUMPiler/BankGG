@@ -37,5 +37,11 @@ namespace BankGG
                 MessageBox.Show("Unable to create account"+eg);
             }
         }
+
+        private void fetchdetailsbtn_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.Show();
+        }
     }
 }

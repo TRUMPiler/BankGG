@@ -28,35 +28,71 @@ namespace BankGG
 
         private async void SubmitBtn_Click(object sender, EventArgs e)
         {
-            string date = Birthdate.SelectionRange.Start.ToString();
-            var datalayer = new GGdata
+            if (FirstNtext.Text == null || SecondNtext.Text == null || ThirdNtext.Text == null || accTypeCB.SelectedValue == null || Adresstext.Text == null || Emailtext.Text == null || maskedTextBox1.Text == null || Birthdate.SelectionStart == null)
             {
-                Name = FirstNtext.Text + " " + SecondNtext.Text + " " + ThirdNtext.Text,
-                Email = Emailtext.Text,
-                address = Adresstext.Text,
-                AccountType = accTypeCB.SelectedItem.ToString(),
-                Amount = maskedTextBox1.Text,
-                BirthDate = date
-            };
-            SetResponse resp = await customer.SetTaskAsync("Bankdetails/"+FirstNtext.Text,datalayer);
-            GGdata result = resp.ResultAs<GGdata>();
-            MessageBox.Show("Bank Account of "+result.Name+" created succesfully");
-            this.Close();
+                MessageBox.Show("fill all details");
+            }
+            else
+            {
+                string date = Birthdate.SelectionRange.Start.ToString();
+                Data get = new Data();
+
+                try
+                {
+                    FirebaseResponse respBack = await customer.GetTaskAsync("AccountNos");
+                    get = respBack.ResultAs<Data>();
+                }
+                catch (NullReferenceException eg)
+                {
+                    MessageBox.Show("couldn't fetch details for Adding your account please try again later");
+                    this.Close();
+                }
+
+                var datalayer = new GGdata
+                {
+                    ID = get.LastAccountnoadded + 1,
+                    Name = FirstNtext.Text + " " + SecondNtext.Text + " " + ThirdNtext.Text,
+                    Email = Emailtext.Text,
+                    address = Adresstext.Text,
+                    AccountType = accTypeCB.SelectedItem.ToString(),
+                    Amount = maskedTextBox1.Text,
+                    BirthDate = date
+                };
+                var obj = new Data
+                {
+                    LastAccountnoadded = datalayer.ID
+                };
+                try
+                {
+                    SetResponse respGive = await customer.SetTaskAsync("Bankdetails/" + datalayer.ID, datalayer);
+                    GGdata result = respGive.ResultAs<GGdata>();
+                    respGive = await customer.SetTaskAsync("AccountNos", obj);
+                    Data result1 = respGive.ResultAs<Data>();
+                    MessageBox.Show("Bank Account of " + result.Name + " created succesfully");
+                }
+                catch (NullReferenceException es)
+                {
+                    MessageBox.Show("An error occoured while Adding account");
+                    this.Close();
+                }
+
+                this.Close();
+            }
+            
         }
 
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-         
-            f.Show();
             this.Close();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private async void Form2_Load(object sender, EventArgs e)
         {
             customer = new FireSharp.FirebaseClient(config);
+
             
-                if(customer!=null)
+          
+            if (customer!=null)
                 {
                     status = "connected";
                 }

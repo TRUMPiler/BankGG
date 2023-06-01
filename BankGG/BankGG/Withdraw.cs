@@ -73,7 +73,7 @@ namespace BankGG
                 {
                     FirebaseResponse responseUpdate = await customer.UpdateTaskAsync("Bankdetails/" + accountdata.ID, UpdatedAmount);
                     GGdata Updatedata = responseUpdate.ResultAs<GGdata>();
-                    MessageBox.Show("Withdrawal Success");
+                    MessageBox.Show("Withdrawal Successfully done");
                 }
                 catch(NullReferenceException es)
                 {

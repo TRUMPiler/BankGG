@@ -43,7 +43,6 @@ namespace BankGG
             accountinfo.Columns.Add("Address");
             accountinfo.Columns.Add("Amount");
             accountinfo.Columns.Add("Account Type");
-
             try
             {
                 FirebaseResponse responseGetdata = await customer.GetTaskAsync("Bankdetails/" + maskedTextBox1.Text);
@@ -62,9 +61,9 @@ namespace BankGG
             dataGridView1.Visible = true;
             dataGridView1.DataSource = accountinfo;
             }
-            catch (NullReferenceException ef)
+            catch(NullReferenceException ef)
             {
-                MessageBox.Show("didnt work" + e);
+                MessageBox.Show("Account not Found Or Network is unstable");
             }
         }
 

@@ -42,9 +42,10 @@ namespace BankGG
             this.addAccbtn.AutoSize = true;
             this.addAccbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addAccbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAccbtn.Location = new System.Drawing.Point(221, 31);
+            this.addAccbtn.Location = new System.Drawing.Point(295, 38);
+            this.addAccbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addAccbtn.Name = "addAccbtn";
-            this.addAccbtn.Size = new System.Drawing.Size(253, 36);
+            this.addAccbtn.Size = new System.Drawing.Size(337, 44);
             this.addAccbtn.TabIndex = 0;
             this.addAccbtn.Text = "Add Account";
             this.addAccbtn.UseVisualStyleBackColor = true;
@@ -53,9 +54,10 @@ namespace BankGG
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 9);
+            this.label1.Location = new System.Drawing.Point(160, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "choose an option";
             // 
@@ -64,21 +66,24 @@ namespace BankGG
             this.delAccbtn.AutoSize = true;
             this.delAccbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.delAccbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delAccbtn.Location = new System.Drawing.Point(221, 89);
+            this.delAccbtn.Location = new System.Drawing.Point(295, 110);
+            this.delAccbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delAccbtn.Name = "delAccbtn";
-            this.delAccbtn.Size = new System.Drawing.Size(253, 36);
+            this.delAccbtn.Size = new System.Drawing.Size(337, 44);
             this.delAccbtn.TabIndex = 2;
             this.delAccbtn.Text = "Delete Account";
             this.delAccbtn.UseVisualStyleBackColor = true;
+            this.delAccbtn.Click += new System.EventHandler(this.delAccbtn_Click);
             // 
             // fetchdetailsbtn
             // 
             this.fetchdetailsbtn.AutoSize = true;
             this.fetchdetailsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.fetchdetailsbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fetchdetailsbtn.Location = new System.Drawing.Point(221, 143);
+            this.fetchdetailsbtn.Location = new System.Drawing.Point(295, 176);
+            this.fetchdetailsbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fetchdetailsbtn.Name = "fetchdetailsbtn";
-            this.fetchdetailsbtn.Size = new System.Drawing.Size(253, 36);
+            this.fetchdetailsbtn.Size = new System.Drawing.Size(337, 44);
             this.fetchdetailsbtn.TabIndex = 3;
             this.fetchdetailsbtn.Text = "See your bank details";
             this.fetchdetailsbtn.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@ namespace BankGG
             this.withbtn.AutoSize = true;
             this.withbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.withbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.withbtn.Location = new System.Drawing.Point(221, 197);
+            this.withbtn.Location = new System.Drawing.Point(295, 242);
+            this.withbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.withbtn.Name = "withbtn";
-            this.withbtn.Size = new System.Drawing.Size(253, 36);
+            this.withbtn.Size = new System.Drawing.Size(337, 44);
             this.withbtn.TabIndex = 4;
             this.withbtn.Text = "Withdraw Money";
             this.withbtn.UseVisualStyleBackColor = true;
@@ -101,28 +107,30 @@ namespace BankGG
             this.depbtn.AutoSize = true;
             this.depbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.depbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depbtn.Location = new System.Drawing.Point(221, 246);
+            this.depbtn.Location = new System.Drawing.Point(295, 303);
+            this.depbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.depbtn.Name = "depbtn";
-            this.depbtn.Size = new System.Drawing.Size(253, 36);
+            this.depbtn.Size = new System.Drawing.Size(337, 44);
             this.depbtn.TabIndex = 5;
             this.depbtn.Text = "Deposit money";
             this.depbtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.depbtn);
             this.Controls.Add(this.withbtn);
             this.Controls.Add(this.fetchdetailsbtn);
             this.Controls.Add(this.delAccbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addAccbtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

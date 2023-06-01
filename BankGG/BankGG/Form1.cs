@@ -21,10 +21,7 @@ namespace BankGG
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
         private void addAccbtn_Click(object sender, EventArgs e)
         {
             try
@@ -41,6 +38,12 @@ namespace BankGG
         private void fetchdetailsbtn_Click(object sender, EventArgs e)
         {
             Form3 f = new Form3();
+            f.Show();
+        }
+
+        private void delAccbtn_Click(object sender, EventArgs e)
+        {
+            Form5 f = new Form5();
             f.Show();
         }
     }

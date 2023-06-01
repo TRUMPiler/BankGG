@@ -12,7 +12,7 @@ using FireSharp.Interfaces;
 using FireSharp.Response;
 namespace BankGG
 {
-    public partial class Form5 : Form
+    public partial class DeleteForm : Form
     {
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -20,16 +20,23 @@ namespace BankGG
             BasePath = "https://bankggs-113b4-default-rtdb.firebaseio.com/"
         };
         IFirebaseClient customer;
-        
-        public Form5()
+        int amount = 0;
+        public DeleteForm()
         {
             InitializeComponent();
         }
 
         private async void SearchBtn_Click(object sender, EventArgs e)
         {
+
             try
             {
+                FirebaseResponse responseGetdata = await customer.GetTaskAsync("Bankdetails/" + maskedTextBox1.Text); ;
+                GGdata accountdata = responseGetdata.ResultAs<GGdata>();
+
+
+
+
                 DataTable accountinfo = new DataTable();
                 accountinfo.Columns.Add("Account no");
                 accountinfo.Columns.Add("Name");
@@ -38,8 +45,6 @@ namespace BankGG
                 accountinfo.Columns.Add("Address");
                 accountinfo.Columns.Add("Amount");
                 accountinfo.Columns.Add("Account Type");
-                FirebaseResponse responseGetdata = await customer.GetTaskAsync("Bankdetails/" + maskedTextBox1.Text);
-                GGdata accountdata = responseGetdata.ResultAs<GGdata>();
 
                 DataRow InfoRow = accountinfo.NewRow();
                 InfoRow["Account no"] = accountdata.ID;
@@ -50,18 +55,18 @@ namespace BankGG
                 InfoRow["Amount"] = accountdata.Amount;
                 InfoRow["Account Type"] = accountdata.AccountType;
                 accountinfo.Rows.Add(InfoRow);
-
+                amount = Convert.ToInt32(accountdata.Amount);
                 dataGridView1.Visible = true;
                 dataGridView1.DataSource = accountinfo;
                 SearchBtn.Visible = false;
                 dataGridView1.Visible = true;
                 DeleteBtn.Visible = true;
-
             }
-            catch(NullReferenceException eS)
+            catch(NullReferenceException es)
             {
-                MessageBox.Show("Account Not Found Or An error Occured");
+                MessageBox.Show("Account not found or an network is unstable");
             }
+            
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -69,9 +74,23 @@ namespace BankGG
             customer = new FireSharp.FirebaseClient(config);
         }
 
-        private void DeleteBtn_Click(object sender, EventArgs e)
+        private async void  DeleteBtn_Click(object sender, EventArgs e)
         {
-
+            if (amount==0)
+            {
+                try
+                {
+                    FirebaseResponse response1 = await customer.DeleteTaskAsync("Bankdetails/" + maskedTextBox1.Text);
+                    MessageBox.Show("Account Deleted");
+                }catch(NullReferenceException eg)
+                {
+                    MessageBox.Show("Could not delete the account Operation failed");
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Account balance is not Zero for account to be delete please withdraw all cash for Account to be deleted");
+            }
         }
     }
 }

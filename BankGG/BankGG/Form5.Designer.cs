@@ -1,7 +1,7 @@
 ﻿
 namespace BankGG
 {
-    partial class Form5
+    partial class DeleteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,9 +39,10 @@ namespace BankGG
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(334, 166);
+            this.SearchBtn.Location = new System.Drawing.Point(250, 135);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
+            this.SearchBtn.Size = new System.Drawing.Size(56, 19);
             this.SearchBtn.TabIndex = 0;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -50,54 +51,59 @@ namespace BankGG
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(303, 91);
+            this.label1.Location = new System.Drawing.Point(227, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 17);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Account No";
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(277, 120);
+            this.maskedTextBox1.Location = new System.Drawing.Point(208, 98);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox1.Mask = "0000000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(177, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(134, 20);
             this.maskedTextBox1.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 10);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 8);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(858, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 122);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.Visible = false;
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(321, 232);
+            this.DeleteBtn.Location = new System.Drawing.Point(241, 188);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(101, 52);
+            this.DeleteBtn.Size = new System.Drawing.Size(76, 42);
             this.DeleteBtn.TabIndex = 4;
             this.DeleteBtn.Text = "Delete account";
             this.DeleteBtn.UseVisualStyleBackColor = true;
             this.DeleteBtn.Visible = false;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // Form5
+            // DeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 531);
+            this.ClientSize = new System.Drawing.Size(662, 431);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBtn);
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "DeleteForm";
+            this.Text = "Delete Account";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

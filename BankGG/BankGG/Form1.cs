@@ -14,9 +14,9 @@ using FireSharp.Response;
 
 namespace BankGG
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -37,14 +37,20 @@ namespace BankGG
 
         private void fetchdetailsbtn_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
+            DetailsForm f = new DetailsForm();
             f.Show();
         }
 
         private void delAccbtn_Click(object sender, EventArgs e)
         {
-            Form5 f = new Form5();
+            DeleteForm f = new DeleteForm();
             f.Show();
+        }
+
+        private void withbtn_Click(object sender, EventArgs e)
+        {
+            Withdraw wd = new Withdraw();
+            wd.Show();
         }
     }
 }

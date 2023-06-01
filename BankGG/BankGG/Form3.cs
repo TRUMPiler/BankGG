@@ -13,7 +13,7 @@ using FireSharp.Response;
 
 namespace BankGG
 {
-    public partial class Form3 : Form
+    public partial class DetailsForm : Form
     {
 
         IFirebaseConfig config = new FirebaseConfig
@@ -22,7 +22,7 @@ namespace BankGG
             BasePath = "https://bankggs-113b4-default-rtdb.firebaseio.com/"
         };
         IFirebaseClient customer;
-        public Form3()
+        public DetailsForm()
         {
             InitializeComponent();
         }

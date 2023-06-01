@@ -1,7 +1,7 @@
 ﻿
 namespace BankGG
 {
-    partial class Form3
+    partial class DetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -91,7 +91,7 @@ namespace BankGG
             this.FormcloseBtn.UseVisualStyleBackColor = false;
             this.FormcloseBtn.Click += new System.EventHandler(this.FormcloseBtn_Click);
             // 
-            // Form3
+            // DetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +101,8 @@ namespace BankGG
             this.Controls.Add(this.retriveBtn);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.Accountnolbl);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "DetailsForm";
+            this.Text = "Show Details";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

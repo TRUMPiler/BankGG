@@ -55,7 +55,8 @@ namespace BankGG
 
         private void depbtn_Click(object sender, EventArgs e)
         {
-
+            Deposit d = new Deposit();
+            d.Show();
         }
     }
 }

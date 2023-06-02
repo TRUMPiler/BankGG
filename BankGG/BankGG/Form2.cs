@@ -28,7 +28,7 @@ namespace BankGG
 
         private async void SubmitBtn_Click(object sender, EventArgs e)
         {
-            if (FirstNtext.Text == null || SecondNtext.Text == null || ThirdNtext.Text == null || accTypeCB.SelectedValue == null || Adresstext.Text == null || Emailtext.Text == null || maskedTextBox1.Text == null || Birthdate.SelectionStart == null)
+            if (FirstNtext.Text == null || SecondNtext.Text == null || ThirdNtext.Text == null || accTypeCB.SelectedText == null || Adresstext.Text == null || Emailtext.Text == null || maskedTextBox1.Text == null || Birthdate.SelectionStart == null)
             {
                 MessageBox.Show("fill all details");
             }

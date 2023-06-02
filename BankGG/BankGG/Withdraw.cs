@@ -11,7 +11,7 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 namespace BankGG
-{
+{ 
     public partial class Withdraw : Form
     {
         IFirebaseConfig config = new FirebaseConfig
@@ -73,7 +73,7 @@ namespace BankGG
                 {
                     FirebaseResponse responseUpdate = await customer.UpdateTaskAsync("Bankdetails/" + accountdata.ID, UpdatedAmount);
                     GGdata Updatedata = responseUpdate.ResultAs<GGdata>();
-                    MessageBox.Show("Withdrawal Successfully done");
+                    MessageBox.Show("Withdrawal Success" );
                 }
                 catch(NullReferenceException es)
                 {

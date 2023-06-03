@@ -6,7 +6,10 @@
 
 And this is our Collaborative Project where we are working on Designing and setting a test Bank environment using Firebase Realtime database and Firestore
 
-# Project version:- ``` 1.0(Sketch) ```
+# Project version:- 
+``` 
+1.1(interface reimagined) 
+```
 
 ## Project Status:- Ongoing
 

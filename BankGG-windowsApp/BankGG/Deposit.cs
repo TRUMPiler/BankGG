@@ -27,20 +27,36 @@ namespace BankGG
             InitializeComponent();
         }
 
-        private async void SearchBtn_Click(object sender, EventArgs e)
+
+        private void Deposit_Load(object sender, EventArgs e)
         {
-            
+            customer = new FireSharp.FirebaseClient(config);
+        }
+
+        private async void SearchBtn_Click_1(object sender, EventArgs e)
+        {
+
             try
             {
                 FirebaseResponse responseGetdata = await customer.GetTaskAsync("Bankdetails/" + AccnoTB.Text); ;
                 accountdata = responseGetdata.ResultAs<GGdata>();
+
+
+
+
+
+
+
+
+
+
                 amount = Convert.ToInt32(accountdata.Amount);
                 Balancelbl.Text = Convert.ToString(amount);
                 SearchBtn.Visible = false;
-                EnterAcclbl.Visible = false;
+                enteraccnolbl.Visible = false;
                 AccnoTB.Visible = false;
                 DepositAmountTB.Visible = true;
-                AccBalancelbl.Visible = true;
+                AccountBallbl.Visible = true;
                 Balancelbl.Visible = true;
                 DepositAmountBtn.Visible = true;
             }
@@ -51,7 +67,7 @@ namespace BankGG
             }
         }
 
-        private async void DepositAmountBtn_Click(object sender, EventArgs e)
+        private async void DepositAmountBtn_Click_1(object sender, EventArgs e)
         {
             if (Convert.ToInt32(DepositAmountTB.Text) <= 52000)
             {
@@ -69,6 +85,17 @@ namespace BankGG
                 {
                     FirebaseResponse responseUpdate = await customer.UpdateTaskAsync("Bankdetails/" + accountdata.ID, UpdatedAmount);
                     GGdata Updatedata = responseUpdate.ResultAs<GGdata>();
+
+
+
+
+
+
+
+
+
+
+
                     MessageBox.Show("Deposit Success");
                 }
                 catch (NullReferenceException es)
@@ -84,9 +111,9 @@ namespace BankGG
             this.Close();
         }
 
-        private void Deposit_Load(object sender, EventArgs e)
+        private void FormCloseBtn_Click(object sender, EventArgs e)
         {
-            customer = new FireSharp.FirebaseClient(config);
+            this.Close();
         }
     }
 }

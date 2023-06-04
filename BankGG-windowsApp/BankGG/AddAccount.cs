@@ -26,15 +26,59 @@ namespace BankGG
             InitializeComponent();
         }
 
-        private async void SubmitBtn_Click(object sender, EventArgs e)
+       
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
         {
-            if (FirstNtext.Text == null || SecondNtext.Text == null || ThirdNtext.Text == null || accTypeCB.SelectedText == null || Adresstext.Text == null || Emailtext.Text == null || maskedTextBox1.Text == null || Birthdate.SelectionStart == null)
+            this.Close();
+        }
+
+        private async void Form2_Load(object sender, EventArgs e)
+        {
+            customer = new FireSharp.FirebaseClient(config);
+
+            
+          
+            if (customer!=null)
+                {
+                    status = "connected";
+                }
+                else
+                {
+                    status = "Not connected";
+                MessageBox.Show(status+"\n form cannot opened");
+                this.Close();
+            }
+           
+        }
+
+        private void Emailtext_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Emaillbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormCloseBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private async void SubmitBtn_Click_1(object sender, EventArgs e)
+        {
+            if (FirstNtext.Text == null || SecondNtext.Text == null || ThirdNtext.Text == null || accTypeCB.SelectedItem == null || Adresstext.Text == null || Emailtext.Text == null || maskedTextBox1.Text == null || Birthdate.Value==null)
             {
                 MessageBox.Show("fill all details");
             }
             else
             {
-                string date = Birthdate.SelectionRange.Start.ToString();
+
+                string date = Birthdate.Value.ToString();
+
                 Data get = new Data();
 
                 try
@@ -69,6 +113,7 @@ namespace BankGG
                     respGive = await customer.SetTaskAsync("AccountNos", obj);
                     Data result1 = respGive.ResultAs<Data>();
                     MessageBox.Show("Bank Account of " + result.Name + " created succesfully");
+                    MessageBox.Show("Generated Account no is"+result.ID);
                 }
                 catch (NullReferenceException es)
                 {
@@ -78,31 +123,11 @@ namespace BankGG
 
                 this.Close();
             }
-            
         }
 
-        private void Cancelbtn_Click(object sender, EventArgs e)
+        private void FormCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private async void Form2_Load(object sender, EventArgs e)
-        {
-            customer = new FireSharp.FirebaseClient(config);
-
-            
-          
-            if (customer!=null)
-                {
-                    status = "connected";
-                }
-                else
-                {
-                    status = "Not connected";
-                MessageBox.Show(status+"\n form cannot opened");
-                this.Close();
-            }
-           
         }
     }
 }

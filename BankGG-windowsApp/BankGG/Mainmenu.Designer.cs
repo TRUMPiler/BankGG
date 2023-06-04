@@ -30,6 +30,7 @@ namespace BankGG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -81,6 +82,7 @@ namespace BankGG
             // 
             this.AddAccountBtn.Animated = true;
             this.AddAccountBtn.AutoRoundedCorners = true;
+            this.AddAccountBtn.BackColor = System.Drawing.Color.Transparent;
             this.AddAccountBtn.BorderColor = System.Drawing.Color.White;
             this.AddAccountBtn.BorderRadius = 21;
             this.AddAccountBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
@@ -112,6 +114,7 @@ namespace BankGG
             // 
             this.DeleteBtn.Animated = true;
             this.DeleteBtn.AutoRoundedCorners = true;
+            this.DeleteBtn.BackColor = System.Drawing.Color.Transparent;
             this.DeleteBtn.BorderRadius = 21;
             this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -138,6 +141,7 @@ namespace BankGG
             // 
             this.ViewDetails.Animated = true;
             this.ViewDetails.AutoRoundedCorners = true;
+            this.ViewDetails.BackColor = System.Drawing.Color.Transparent;
             this.ViewDetails.BorderRadius = 21;
             this.ViewDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ViewDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -164,6 +168,7 @@ namespace BankGG
             // 
             this.WithCashBtn.Animated = true;
             this.WithCashBtn.AutoRoundedCorners = true;
+            this.WithCashBtn.BackColor = System.Drawing.Color.Transparent;
             this.WithCashBtn.BorderRadius = 21;
             this.WithCashBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WithCashBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -190,6 +195,7 @@ namespace BankGG
             // 
             this.Depositbtn.Animated = true;
             this.Depositbtn.AutoRoundedCorners = true;
+            this.Depositbtn.BackColor = System.Drawing.Color.Transparent;
             this.Depositbtn.BorderRadius = 21;
             this.Depositbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Depositbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -215,6 +221,7 @@ namespace BankGG
             // FormCloseBtn
             // 
             this.FormCloseBtn.Animated = true;
+            this.FormCloseBtn.BackColor = System.Drawing.Color.Transparent;
             this.FormCloseBtn.BorderRadius = 5;
             this.FormCloseBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.FormCloseBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -236,7 +243,8 @@ namespace BankGG
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.FormCloseBtn);
             this.Controls.Add(this.Depositbtn);

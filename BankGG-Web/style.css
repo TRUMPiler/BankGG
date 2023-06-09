@@ -7,10 +7,10 @@
 }
 .banner
 {
-  width: 100%;
+  max-width: 100%;
   height:100vh;
-  background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/back-image.jpg);
-  background-size: cover;
+  background-image:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(Images/back-image.jpg);
+  background-size: auto;
   background-position: center;
 }
 .navbar
@@ -25,7 +25,7 @@
 }
 .logo
 {
-  width: 70px;
+  max-width: 70px;
   cursor: pointer;
 
 }
@@ -68,11 +68,55 @@ text-transform:uppercase;
 }
 .content h1
 {
-  font-size: 70px;
+  font-size: 4em;
   margin-top: 80px;
 
 }
+@media(max-width:789px)
+{
+button
+{
+  width: 5em;
+  padding: 10px 0;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 15px;
+  font-weight:normal;
+  border: 1px solid rgb(16, 94, 184);
+  background: transparent;
+  color:  white;
+  cursor: pointer;
+  position:static;
+  overflow: hidden;
+}
 
+  .content h1
+  {
+    font-size: 2em;
+    margin-top: 30%;
+    display: inline-block;
+  } 
+.navbar
+{
+  display: flexbox;
+  font-size: 0.9rem;
+}
+  .banner
+{
+  max-width:100%;
+  height: 100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(Images/back-image.jpg);
+  background-size: auto;
+  background-position: center;
+}
+.navbar ul li
+{
+  list-style:none;
+  display: block;
+  margin: 10px 50px;
+  position: relative;
+}
+}
 .content p{
   
   margin: 20px auto;
@@ -81,10 +125,10 @@ text-transform:uppercase;
 }
 button
 {
-  width: 200px;
+  width: 10em;
   padding: 15px 0;
   text-align: center;
-  margin: 20px 10px;
+  margin: 20px auto;
   border-radius: 25px;
   font-weight: bold;
   border: 2px solid rgb(16, 94, 184);

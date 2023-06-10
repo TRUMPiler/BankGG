@@ -50,6 +50,9 @@ namespace BankGG
 
 
 
+
+
+
                 amount = Convert.ToInt32(accountdata.Amount);
                 Balancelbl.Text = Convert.ToString(amount);
                 SearchBtn.Visible = false;

@@ -49,7 +49,6 @@ C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\bi
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\bin\Debug\RestSharp.dll
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\bin\Debug\Newtonsoft.Json.xml
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\bin\Debug\RestSharp.xml
-C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.csproj.AssemblyReference.cache
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.Deposit.resources
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.MainForm.resources
 C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.AddAccount.resources
@@ -85,3 +84,4 @@ C:\Users\cjesu\Downloads\BankGG-main\BankGG-main\BankGG-windowsApp\BankGG\obj\De
 C:\Users\cjesu\Downloads\BankGG-main\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.csproj.CopyComplete
 C:\Users\cjesu\Downloads\BankGG-main\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.exe
 C:\Users\cjesu\Downloads\BankGG-main\BankGG-main\BankGG-windowsApp\BankGG\obj\Debug\BankGG.pdb
+C:\Users\cjesu\Downloads\BankGG-main (1)\BankGG-main\BankGG-windowsApp\BankGG\bin\Debug\Guna.UI2.dll

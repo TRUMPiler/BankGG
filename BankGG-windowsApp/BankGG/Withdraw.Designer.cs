@@ -100,11 +100,12 @@ namespace BankGG
             this.enteraccnolbl.BackColor = System.Drawing.Color.Transparent;
             this.enteraccnolbl.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enteraccnolbl.ForeColor = System.Drawing.Color.White;
-            this.enteraccnolbl.Location = new System.Drawing.Point(137, 134);
+            this.enteraccnolbl.Location = new System.Drawing.Point(88, 125);
             this.enteraccnolbl.Name = "enteraccnolbl";
             this.enteraccnolbl.Size = new System.Drawing.Size(202, 50);
             this.enteraccnolbl.TabIndex = 9;
             this.enteraccnolbl.Text = "Enter account no:";
+            this.enteraccnolbl.Click += new System.EventHandler(this.enteraccnolbl_Click);
             // 
             // SearchBtn
             // 
@@ -139,7 +140,7 @@ namespace BankGG
             this.WithBtn.FillColor = System.Drawing.Color.DarkOliveGreen;
             this.WithBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.WithBtn.ForeColor = System.Drawing.Color.White;
-            this.WithBtn.Location = new System.Drawing.Point(287, 363);
+            this.WithBtn.Location = new System.Drawing.Point(297, 203);
             this.WithBtn.Name = "WithBtn";
             this.WithBtn.Size = new System.Drawing.Size(180, 45);
             this.WithBtn.TabIndex = 11;

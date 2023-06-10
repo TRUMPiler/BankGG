@@ -47,14 +47,10 @@ namespace BankGG
                 this.Close();
             }
 
-            
-           
-                try{
+            try
+            {
                 FirebaseResponse responseGetdata = await customer.GetTaskAsync("Bankdetails/" + maskedTextBox1.Text);
                 GGdata accountdata = responseGetdata.ResultAs<GGdata>();
-
-
-
 
                 Accnolbl.Visible = false;
                 maskedTextBox1.Visible = false;
@@ -81,11 +77,16 @@ namespace BankGG
                 Amount.Text = accountdata.Amount;
                 Accounttype.Text = accountdata.AccountType;
             }
-            catch(NullReferenceException)
-                {
+            catch(NullReferenceException){
+
                 MessageBox.Show("Account not Found Or Network is unstable");
                 this.Close();
+
             }
+               
+            
+                
+            
                 
             
                 

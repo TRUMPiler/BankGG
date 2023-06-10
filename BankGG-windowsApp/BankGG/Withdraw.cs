@@ -80,6 +80,12 @@ namespace BankGG
 
 
 
+                
+
+
+
+
+
 
                 amount = Convert.ToInt32(accountdata.Amount);
                 Balancelbl.Text = Convert.ToString(amount);
@@ -91,7 +97,7 @@ namespace BankGG
                 Balancelbl.Visible = true;
                 AccountBallbl.Visible = true;
             }
-            catch (NullReferenceException es)
+            catch(NullReferenceException es)
             {
                 MessageBox.Show("Account not found or an network is unstable");
                 this.Close();
@@ -134,6 +140,11 @@ namespace BankGG
         private void FormCloseBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void enteraccnolbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

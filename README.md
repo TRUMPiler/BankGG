@@ -21,4 +21,4 @@ And this is our Collaborative Project where we are working on Designing and sett
 <a href="https://github.com/Whitespider06" target="blank"><img align="left" src="https://www.shareicon.net/download/2016/07/09/118881_media.ico" height=30px width=30px/></a>
 <a href="www.instagram.com/whitespider0673" target="blank"><img align="center" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" height=30px width=30px/></a>
 
-## website link:- https://bakagg12.000webhostapp.com/
+## website link:- https://trumpiler.github.io/GAMS.io/

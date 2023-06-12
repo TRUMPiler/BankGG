@@ -1,65 +1,21 @@
-$('.email').on("change keyup paste",
-  function(){
-    if($(this).val()){
-      $('.icon-paper-plane').addClass("next");
-    } else {
-      $('.icon-paper-plane').removeClass("next");
+let r=Math.floor(Math.random()*10);
+let elem=document.getElementsByTagName('h2');
+//console.log(elem);
+elem[0].innerText="enter the no \""+r+"\" in the textbox to verify you are not a bot";
+
+let elembutton=document.getElementById("myInput");
+console.log(elembutton);
+elembutton.addEventListener("input",function()
+{
+    if(elembutton.value==r.toString())
+    {
+        elembutton.classList.add("ggs1")
+        document.getElementsByTagName('h2')[0].classList.add("ggs1");
+        document.getElementsByTagName('button')[0].classList.remove("ggs1");
+        document.getElementsByTagName('button')[0].classList.add("button-10");
     }
-  }
-);
-
-$('.next-button').hover(
-  function(){
-    $(this).css('cursor', 'pointer');
-  }
-);
-
-$('.next-button.email').click(
-  function(){
-    console.log("Something");
-    $('.email-section').addClass("fold-up");
-    $('.password-section').removeClass("folded");
-  }
-);
-
-$('.password').on("change keyup paste",
-  function(){
-    if($(this).val()){
-      $('.icon-lock').addClass("next");
-    } else {
-      $('.icon-lock').removeClass("next");
+    else
+    {
+        console.log("no");
     }
-  }
-);
-
-$('.next-button').hover(
-  function(){
-    $(this).css('cursor', 'pointer');
-  }
-);
-
-$('.next-button.password').click(
-  function(){
-    console.log("Something");
-    $('.password-section').addClass("fold-up");
-    $('.repeat-password-section').removeClass("folded");
-  }
-);
-
-$('.repeat-password').on("change keyup paste",
-  function(){
-    if($(this).val()){
-      $('.icon-repeat-lock').addClass("next");
-    } else {
-      $('.icon-repeat-lock').removeClass("next");
-    }
-  }
-);
-
-$('.next-button.repeat-password').click(
-  function(){
-    console.log("Something");
-    $('.repeat-password-section').addClass("fold-up");
-    $('.success').css("marginTop", 0);
-  }
-);
+})
